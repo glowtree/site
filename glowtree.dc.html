@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <title>glowtree</title>
+  <meta name="description" content="a software company specializing in video game, film, visualization, AI, and web related technologies">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;600;700&amp;family=Space+Grotesk:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+  <script src="./glowtree.js"></script>
+  <style>
+    :root { --accent: #00fff9; }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: #0a0d0b; }
+    ::selection { background: rgba(87,227,137,0.28); }
+    .gt-link { position: relative; }
+    .gt-link::after { content:''; position:absolute; left:0; bottom:-3px; width:0; height:1px; background:var(--accent); transition:width .3s ease; }
+    .gt-link:hover::after { width:100%; }
+  </style>
+</helmet>
+<template id="__bundler_thumbnail">
+  <div style="width:100%;height:100%;background:#0a0d0b;display:flex;align-items:center;justify-content:center;">
+    <svg viewBox="-35 -60 70 145" width="30%" style="overflow:visible;">
+      <polyline points="-25,-35 0,-54 25,-35 0,-54 0,-25 -28,-5 0,-24 28,-5 0,-25 0,4 -30,28 0,5 30,27 0,5 0,80" fill="none" stroke="#00fff9" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" style="filter:drop-shadow(0 0 6px #00fff9);"></polyline>
+    </svg>
+  </div>
+</template>
+<div style="min-height: 100vh; color: #e9efe9; font-family: 'Space Grotesk',sans-serif; overflow-x: hidden; background-color: #1B1B1B">
+
+  <!-- Top bar -->
+  <header style="position: absolute; top: 0; left: 0; right: 0; z-index: 10; display: flex; align-items: center; justify-content: flex-end; padding: 26px 40px">
+    
+    
+  <nav style="display: flex; align-items: center; gap: 28px; font-family: 'IBM Plex Mono',monospace; font-size: 12px; letter-spacing: 0.04em">
+      <a href="#about" class="gt-link" style="color:#9aa39c; text-decoration:none;">about</a>
+      <a href="/cdn-cgi/l/email-protection#11787f777e51767d7e66656374743f727e7c" class="gt-link" style="color:#9aa39c; text-decoration:none;"><span class="__cf_email__" data-cfemail="cfa6a1a9a08fa8a3a0b8bbbdaaaae1aca0a2">[email&#160;protected]</span></a>
+    </nav></header>
+
+  <!-- Hero -->
+  <section style="position:relative; min-height:100vh; display:flex; flex-direction:column; align-items:center; justify-content:center; padding:120px 24px 80px; text-align:center;">
+
+    <h1 style="margin:0; font-family:'Comfortaa',cursive; font-size:clamp(58px,13vw,150px); font-weight:600; letter-spacing:-0.02em; line-height:1; color:#f2f6f2; white-space:nowrap;">glow<span id="treeStage" style="display: inline-block; position: relative; width: 0.893em; height: 1.88em; vertical-align: -0.12em; margin: 0 -0.02em; left: 0.04em; top: -0.033em;"></span>ree</h1>
+
+    <div style="margin-top:28px; font-family:'IBM Plex Mono',monospace; font-size:12.5px; line-height:1.9; letter-spacing:0.02em; color:#8b948d; max-width:620px; text-align:center; text-wrap:balance;">{{ servicesLine }}</div>
+
+    <div style="margin-top:44px; font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:#5c655e; display:flex; align-items:center; gap:8px;">
+      <span style="width:6px; height:6px; border-radius:50%; background:var(--accent); box-shadow:0 0 8px var(--accent);"></span>
+      click the tree
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" style="max-width:720px; margin:0 auto; padding:60px 32px 40px;">
+    <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.18em; text-transform:uppercase; color:var(--accent); margin-bottom:24px;">about</div>
+    <p style="margin:0; font-size:clamp(22px,3.4vw,30px); font-weight:400; line-height:1.5; letter-spacing:-0.01em; color:#dfe6df; text-wrap:pretty;">glowtree makes software for video game, film, and visualization applications.&nbsp; It's creator&nbsp;has over 20 years of industry experience, both as an engineer and artist.</p>
+  </section>
+
+  <!-- What we do -->
+  <section style="max-width:720px; margin:0 auto; padding:40px 32px 100px;">
+    <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.18em; text-transform:uppercase; color:var(--accent); margin-bottom:24px;">what we do</div>
+    <ul style="margin:0; padding:0; list-style:none; display:flex; flex-direction:column;">
+      <sc-for list="{{ servicesNum }}" as="s" hint-placeholder-count="5">
+        <li style="display:flex; align-items:baseline; gap:18px; padding:18px 0; border-top:1px solid rgba(255,255,255,0.07); font-size:19px; color:#e2e8e2;">
+          <span style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#5c655e; width:28px; flex-shrink:0;">{{ s.num }}</span>
+          <span>{{ s.label }}</span>
+        </li>
+      </sc-for>
+    </ul>
+  </section>
+
+  <!-- Footer -->
+  <footer style="border-top:1px solid rgba(255,255,255,0.07); padding:36px 40px; display:flex; flex-direction:column; gap:20px; font-family:'IBM Plex Mono',monospace; font-size:12px; color:#6b746d;">
+    <div style="display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:16px;">
+      <div style="display:flex; align-items:center; gap:10px;">
+        <span style="width:7px; height:7px; border-radius:50%; background:var(--accent); box-shadow:0 0 8px var(--accent);"></span>
+        <span style="font-family:'Comfortaa',cursive; font-weight:600; color:#9aa39c;">glowtree</span>
+        <span>· Toronto, Canada</span>
+      </div>
+      <div style="letter-spacing:0.04em; color:#565f58;">© 2011–2026 glowtree™ · all rights reserved</div><a href="/cdn-cgi/l/email-protection#1c75727a735c7b70736b686e7979327f7371" class="gt-link" style="color:#9aa39c; text-decoration:none;"><span class="__cf_email__" data-cfemail="fd94939b92bd9a91928a898f9898d39e9290">[email&#160;protected]</span></a>
+    </div>
+    
+  </footer>
+</div>
+</x-dc>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1200,&quot;height&quot;:900},&quot;treeColor&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#00fff9&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;options&quot;:[&quot;#57e389&quot;,&quot;#00fff9&quot;,&quot;#ffcf5c&quot;,&quot;#e9efe9&quot;],&quot;section&quot;:&quot;Theme&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      servicesLine: "DCC tools for Unreal, Unity, Maya & Blender  ·  full-stack websites  ·  cross-platform standalone applications  ·  consulting",
+      services: [
+        "DCC tools for Unreal, Unity, Maya & Blender",
+        "full-stack websites",
+        "cross-platform standalone applications",
+        "consulting",
+      ],
+      servicesNum: [
+        { num: "01", label: "DCC tools for Unreal, Unity, Maya and Blender" },
+        { num: "02", label: "full-stack websites" },
+        { num: "03", label: "cross-platform standalone applications" },
+        { num: "04", label: "consulting" },
+      ],
+    };
+  }
+
+  componentDidMount() {
+    this._mountTree();
+  }
+
+  componentDidUpdate() {
+    if (this._tree) this._tree.setColor(this.props.treeColor || "#57e389");
+  }
+
+  _mountTree() {
+    const color = this.props.treeColor || "#57e389";
+    document.documentElement.style.setProperty("--accent", color);
+    let tries = 0;
+    const go = () => {
+      const stage = document.getElementById("treeStage");
+      if (window.GlowTree && stage) {
+        stage.innerHTML = "";
+        const bloom = document.createElement("div");
+        bloom.style.cssText = "position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:820px; height:820px; max-width:220vw; border-radius:50%; z-index:0; pointer-events:none; background:radial-gradient(circle, color-mix(in srgb, var(--accent) 18%, transparent) 0%, color-mix(in srgb, var(--accent) 6%, transparent) 38%, transparent 68%);";
+        stage.appendChild(bloom);
+        this._tree = window.GlowTree.make(stage, { color, lineWidth: 6 });
+        this._tree.svg.style.zIndex = "1";
+        return;
+      }
+      if (tries++ < 120) requestAnimationFrame(go);
+    };
+    go();
+  }
+}
+</script>
+</body>
+</html>
